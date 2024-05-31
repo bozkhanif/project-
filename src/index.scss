@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import "./style/bootstrap.scss";
+
+*{
+  font-family: 'Inter', sans-serif;
+}
+
+.section-hero {
+  height: auto;
+  @media (min-width: 768px) {
+    // height: 100vh;
+  }
+}
+
+.bg-overlay-hero {
+  background: linear-gradient(90deg, rgba(0, 0, 102, 0.95) 4.13%, rgba(0, 0, 102, 0.53) 106.98%);
+width: 100%;
+height: 100%;
+}
+
+.z-n2 {
+  z-index: -2;
+}
+
+.logo{
+  width: auto;
+  height: 50px;
+}
+
+.section-hero {
+   height : auto;
+    @media (min-width: 700px) {
+        height: 550px;
+}
+}
+
+
+// .section-pendaftaran {
+//   height : auto;
+//     @media (min-width: 700px) {
+//         height: 550px;
+//     }
+// }
