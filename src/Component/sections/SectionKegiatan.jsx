@@ -44,7 +44,7 @@ export default function SectionKegiatan() {
                     post._embedded["wp:featuredmedia"]
                       ? post._embedded["wp:featuredmedia"][0].media_details
                           .sizes.full.source_url
-                      : "https://picsum.photos/200/300"
+                      : "https://picsum.photos/300/300"
                   }
                   className="card-img-top"
                   alt="..."
@@ -53,7 +53,9 @@ export default function SectionKegiatan() {
                   <h5 className="card-title">{post.title.rendered}</h5>
                   <div
                     className="card-text"
-                    dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+                    dangerouslySetInnerHTML={{
+                      __html: getMaxKarakter(post.content.rendered, 100),
+                    }}
                   ></div>
                 </div>
                 <div className="card-footer">

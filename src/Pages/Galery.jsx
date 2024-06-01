@@ -1,7 +1,11 @@
+import MainLayout from "../Component/MainLayout";
+
 export default function Galery() {
   return (
     <div>
-      <h1>Galeri</h1>
+      <MainLayout>
+        <h1>Galeri</h1>
+      </MainLayout>
     </div>
   );
 }

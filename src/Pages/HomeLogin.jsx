@@ -1,4 +1,55 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 export default function HomeLogin() {
+  const [isSuccess, setIsSuccess] = useState(null);
+  const [data, setData] = useState(null);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setLoading(true);
+    console.log(`username: ${username}, password: ${password}`);
+    fetch("https://khanif.neuversity.site/wp-json/jwt-auth/v1/token", {
+      method: "POST",
+      body: new URLSearchParams({
+        username: username,
+        password: password,
+      }),
+    })
+      .then((resp) => {
+        if (resp.ok) {
+          setIsSuccess(true);
+          console.log("berhasil");
+        } else {
+          setIsSuccess(false);
+          console.log("gagal");
+        }
+
+        return resp.json();
+      })
+      .then((data) => {
+        setData(data);
+        console.log(data);
+        // berhasil (alert login)
+        if (data.token) {
+          alert("Login Berhasil");
+          // set token ke local storage
+          localStorage.setItem("token", data.token);
+          navigate("/Admin");
+        } else {
+          alert("Login Gagal");
+        }
+      })
+      .catch((error) => console.error("Error:", error));
+
+    setLoading(false);
+  }
+
+  useEffect(() => {}, []);
   return (
     <section>
       <div className="row d-flex h-100 mt-5 ">
@@ -6,70 +57,41 @@ export default function HomeLogin() {
           <h1 className="text-center">Al Anwar 4 - Login</h1>
           {/* username */}
           <div>
-            <label for="Username" class="form-label">
+            <label for="Username" className="form-label">
               Username
             </label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="nama lengkap"
+              value={username}
+              onChange={(Event) => setUsername(Event.target.value)}
               required
             />
             <p>Admin Username</p>
           </div>
           {/* password */}
           <div>
-            <label for="password" class="form-label">
+            <label for="password" className="form-label">
               Password
             </label>
-            <input type="text" class="form-control" id="password" />
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              value={password}
+              onChange={(Event) => setPassword(Event.target.value)}
+            />
           </div>
 
           {/* button modal */}
           <button
             type="button"
             className="btn btn-primary mt-3"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
+            onClick={handleSubmit}
           >
             Submit
           </button>
-          {/* alert */}
-          <div
-            className="modal fade"
-            id="exampleModal"
-            tabIndex={-1}
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div className="modal-dialog">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h1 className="modal-title fs-5" id="exampleModalLabel">
-                    Woro-Woro
-                  </h1>
-                  <button
-                    type="button"
-                    className="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  />
-                </div>
-                <div className="modal-body">
-                  Username dan password yang dimasukkan salah
-                </div>
-                <div className="modal-footer">
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

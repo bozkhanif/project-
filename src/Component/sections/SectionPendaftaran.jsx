@@ -25,99 +25,99 @@ export default function SectionPendaftaran() {
               <form>
                 <div className="container row justify-content-between">
                   {/* Nama Lengkap */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="nama lengkap" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="nama lengkap" className="form-label">
                       Nama Lengkap <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="nama lengkap"
                       placeholder="Nama Sesuai KK"
                       required
                     />
                   </div>
                   {/* Nama Panggilan */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="nama panggilan" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="nama panggilan" className="form-label">
                       Nama Panggilan <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="nama panggilan"
                       placeholder="Masukkan Nama Panggilan"
                       required
                     />
                   </div>
                   {/* NIK/Nomor KTP */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="NIK/nomor KTP" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="NIK/nomor KTP" className="form-label">
                       NIK/Nomor KTP <span className="text-danger">*</span>
                     </label>
                     <input
                       type="number"
-                      class="form-control"
+                      className="form-control"
                       id="NIK"
                       placeholder="Nomor Induk Kependudukan"
                       required
                     />
                   </div>
                   {/* Nomor Telepon */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="nomor telepon" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="nomor telepon" className="form-label">
                       Nomor Telepon <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="nomor telepon"
                       placeholder="08XX-XXXX-XXXX"
                       required
                     />
                   </div>
                   {/* Email */}
-                  <div class="mb-3">
-                    <label for="Email" class="form-label">
+                  <div className="mb-3">
+                    <label for="Email" className="form-label">
                       Email <span className="text-danger">*</span>
                     </label>
                     <input
                       type="email"
-                      class="form-control"
+                      className="form-control"
                       id="email"
                       placeholder="example@gmail.com"
                       required
                     />
                   </div>
                   {/* Tempat Lahir */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="Tempat Lahir" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="Tempat Lahir" className="form-label">
                       Tempat Lahir <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="Tempat Lahir"
                       placeholder="Kota/Kabupaten"
                       required
                     />
                   </div>
                   {/* Tanggal Lahir */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="tanggal lahir" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="tanggal lahir" className="form-label">
                       Tanggal Lahir <span className="text-danger">*</span>
                     </label>
                     <input
                       type="date"
-                      class="form-control"
+                      className="form-control"
                       id="nomor telepon"
                       placeholder="dd/mm/yyyy"
                       required
                     />
                   </div>
                   {/* Jenis Kelamin */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="" className="form-label">
                       Jenis Kelamin <span className="text-danger">*</span>
                     </label>
                     <div className="input-group">
@@ -146,131 +146,131 @@ export default function SectionPendaftaran() {
                     </div>
                   </div>
                   {/* Pekerjaan */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="pekerjaan" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="pekerjaan" className="form-label">
                       Pekerjaan <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="pekerjaan"
                       placeholder="Programmer, Dokter, dll"
                       required
                     />
                   </div>
                   {/* Alamat Lengkap */}
-                  <div class="mb-3">
-                    <label for="alamat lengkap" class="form-label">
+                  <div className="mb-3">
+                    <label for="alamat lengkap" className="form-label">
                       Email <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="alamat"
                       placeholder="Nama Jalan, Gang, No. Rumah, RT dan RW"
                       required
                     />
                   </div>
                   {/* Provinsi */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="provinsi" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="provinsi" className="form-label">
                       Provinsi <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="provinsi"
                       placeholder="Provinsi"
                       required
                     />
                   </div>
                   {/* Kabupaten */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="kabupaten" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="kabupaten" className="form-label">
                       Kabupaten <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="kabupaten"
                       placeholder="Kabupaten"
                       required
                     />
                   </div>
                   {/* Kecamatan */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="kecamatan" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="kecamatan" className="form-label">
                       Kecamatan <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="kecamatan"
                       placeholder="Kecamatan"
                       required
                     />
                   </div>
                   {/* Desa */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="desa" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="desa" className="form-label">
                       Desa <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="desa"
                       placeholder="Desa"
                       required
                     />
                   </div>
                   {/* Pendidikan terakhir */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="pendidikan" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="pendidikan" className="form-label">
                       Pendidikan Terakhir <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="pendidikan"
                       placeholder="Pilih Pendidikan"
                       required
                     />
                   </div>
                   {/* Status Pernikahan */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="status" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="status" className="form-label">
                       Status Pernikahan <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="satus pernikahan"
                       placeholder="Pilih Status"
                       required
                     />
                   </div>
                   {/* Kepengurusan NU */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="kepengurusan" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="kepengurusan" className="form-label">
                       Kepengurusan di NU? <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="kepengurusan"
                       placeholder="Banom, Lembaga, dll"
                       required
                     />
                   </div>
                   {/* Jabatan Kepengurusan */}
-                  <div class="col-md-6 col-12 mb-3">
-                    <label for="jabatan" class="form-label">
+                  <div className="col-md-6 col-12 mb-3">
+                    <label for="jabatan" className="form-label">
                       Jabatan Kepengurusan{" "}
                       <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="jabatan pernikahan"
                       placeholder="Ketua, Sekretaris, dll"
                       required

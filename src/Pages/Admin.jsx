@@ -1,4 +1,28 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 export default function Admin() {
+  const navigate = useNavigate();
+  function handlelogout() {
+    const konfirmasi = confirm("Apakah anda yakin ingin logout?");
+    if (konfirmasi) {
+      // remove token
+      localStorage.removeItem("token");
+      // redirect ke halaman login
+      navigate("/admin/Login");
+    }
+  }
+  function checkAuth() {
+    // auntetikasi token
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/admin/Login");
+    }
+  }
+  // check auntetikasi ketika pertama kali halaman di load, useEffect mounting
+  useEffect(() => {
+    checkAuth();
+  }, []);
   return (
     <section className="d-flex flex-column" style={{ minHeight: "100vh" }}>
       {/* navbar */}
@@ -7,7 +31,9 @@ export default function Admin() {
           <h1 className="text-white">Admin</h1>
 
           <div className="collapse navbar-collapse">
-            <button className="btn btn-danger ms-auto">Logout</button>
+            <button className="btn btn-danger ms-auto" onClick={handlelogout}>
+              Logout
+            </button>
           </div>
         </div>
       </nav>
@@ -31,12 +57,12 @@ export default function Admin() {
             </div>
             {/* judul blog */}
             <div>
-              <label for="Username" class="form-label">
+              <label for="Username" className="form-label">
                 Judul
               </label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="nama lengkap"
                 placeholder="Judul Blog.."
                 required

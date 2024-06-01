@@ -27,8 +27,8 @@ function App() {
           <Route path="/galery" element={<Galery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/Pendaftaran" element={<Pendaftaran />} />
-          <Route path="/Admin" element={<Admin />} />
-          <Route path="/HomeLogin" element={<HomeLogin />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/login" element={<HomeLogin />} />
         </Routes>
       </BrowserRouter>
     </>
