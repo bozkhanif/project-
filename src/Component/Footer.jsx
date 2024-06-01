@@ -4,7 +4,7 @@ import Ellipse2 from "../assets/Ellipse2.png";
 import play from "../assets/play.png";
 export default function Footer() {
   return (
-    <section className=" overflow-hidden position-relative">
+    <section className=" overflow-hidden position-relative mt-auto">
       <div className="container h-100 text-white py-5">
         <div className="row align-items-center pt-5 text-left mb-5 ">
           <div className="col">

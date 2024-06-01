@@ -1,88 +1,54 @@
 import imgProgram from "../../assets/1c87a917f757a3347fd4deb6304ac351.png";
+import CardProgram from "../CardProgram";
 export default function SectionDummy() {
   return (
     <section className="section-dummy">
       <div className="mt-5 bg bg-light">
         <div className="container py-5">
-          <div className="row justify-content-center align-items-center">
+          <div className="row justify-content-center">
+            {/* text gambar */}
             <div className="col-md-4 col-12">
-              <h1>Program Unggulan Pondok Pesantren Al-Anwar IV Sarang</h1>
-              <p>
-                Bibendum ipsum amet enim interdum ut maecenas vitae pulvinar.
-                Tellus ultrices in ipsum ultricies libero tortor sapien sit.
-              </p>
-              <img src={imgProgram} width="100%" />
-            </div>
-            <div className="col-md-4 col-12 mt-4">
-              <div className="card" style={{ width: "100%", height: "100%" }}>
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-              <div
-                className="card mt-3"
-                style={{ width: "100%", height: "100%" }}
-              >
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-              <div
-                className="card mt-3"
-                style={{ width: "100%", height: "100%" }}
-              >
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
+              <div className="d-flex flex-column h-100">
+                <h2 className="fw-bold">
+                  <span className="text-primary">Program Unggulan</span> Pondok
+                  Pesantren Al-Anwar IV Sarang
+                </h2>
+                <p>
+                  Pondok Pesantren Al Anwar 4, sebagai lembaga pendidikan Islam
+                  ternama di Indonesia, senantiasa berkomitmen untuk mencetak
+                  generasi muda Islami yang berakhlak mulia dan berilmu
+                  pengetahuan luas. Untuk mencapai tujuan tersebut, pesantren
+                  ini menyelenggarakan berbagai program unggulan yang dirancang
+                  khusus untuk memenuhi kebutuhan santri di era modern.
+                </p>
+                <img
+                  className="img-program w-100 object-fit-cover mb-3"
+                  src={imgProgram}
+                  width="100%"
+                />
               </div>
             </div>
-            <div className="col-md-4 col-12 mt-4">
-              <div className="card" style={{ width: "100%", height: "100%" }}>
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-              <div
-                className="card mt-3"
-                style={{ width: "100%", height: "100%" }}
-              >
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-              <div
-                className="card mt-3"
-                style={{ width: "100%", height: "100%" }}
-              >
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
+            {/* text gambar end */}
+
+            {/* card 1 */}
+            <div className="col-md-4 col-12 mt-4 mt-md-0">
+              <div className="d-flex flex-column h-100">
+                <CardProgram />
+                <CardProgram />
+                <CardProgram />
               </div>
             </div>
+            {/* card 1 end */}
+
+            {/* card 2 */}
+            <div className="col-md-4 col-12 mt-4 mt-md-0">
+              <div className="d-flex flex-column h-100">
+                <CardProgram />
+                <CardProgram />
+                <CardProgram />
+              </div>
+            </div>
+            {/* card 2 end */}
           </div>
         </div>
       </div>

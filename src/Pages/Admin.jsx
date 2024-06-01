@@ -1,16 +1,36 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
 export default function Admin() {
   const navigate = useNavigate();
+  const [judul, setJudul] = useState("");
+  const [konten, setKonten] = useState("");
   function handlelogout() {
-    const konfirmasi = confirm("Apakah anda yakin ingin logout?");
-    if (konfirmasi) {
-      // remove token
-      localStorage.removeItem("token");
-      // redirect ke halaman login
-      navigate("/admin/Login");
-    }
+    Swal.fire({
+      title: "Apakah anda yakin ingin logout?",
+      icon: "question",
+      showConfirmButton: true,
+      showCancelButton: true,
+      confirmButtonColor: "green",
+      confirmButtonText: "ya",
+      cancelButtonText: "tidak",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // remove token
+        localStorage.removeItem("token");
+
+        //menampilkan pesan logout
+        Swal.fire({
+          title: "Logout Berhasil",
+          text: "Anda telah logout",
+          icon: "success",
+        });
+        // redirect ke halaman login
+        navigate("/admin/Login");
+      }
+    });
   }
   function checkAuth() {
     // auntetikasi token
@@ -24,7 +44,10 @@ export default function Admin() {
     checkAuth();
   }, []);
   return (
-    <section className="d-flex flex-column" style={{ minHeight: "100vh" }}>
+    <section
+      className="d-flex flex-column w-100"
+      style={{ minHeight: "100vh" }}
+    >
       {/* navbar */}
       <nav className="navbar navbar-expand-lg bg-primary">
         <div className="container">
@@ -39,7 +62,7 @@ export default function Admin() {
       </nav>
       {/* content */}
       <form>
-        <div className="row d-flex h-100 mt-5">
+        <div className="container row d-flex h-100 mt-5">
           <div className="col-5 m-auto border py-3 px-3 rounded-3">
             <h3>Membuat Postingan Blog</h3>
             {/* chose file */}
@@ -62,6 +85,7 @@ export default function Admin() {
               </label>
               <input
                 type="text"
+                onInput={(Event) => setJudul(Event.target.value)} //{setJudul}
                 className="form-control"
                 id="nama lengkap"
                 placeholder="Judul Blog.."
@@ -79,6 +103,7 @@ export default function Admin() {
                 placeholder="Conten Blog.."
                 required=""
                 defaultValue={""}
+                onInput={(Event) => setKonten(Event.target.value)} //{setKonten}
               />
               <div className="invalid-feedback">
                 Please enter a message in the Conten form

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2"; // sweet alert
 
 export default function HomeLogin() {
   const [isSuccess, setIsSuccess] = useState(null);
@@ -7,13 +8,11 @@ export default function HomeLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
-    setLoading(true);
     console.log(`username: ${username}, password: ${password}`);
-    fetch("https://khanif.neuversity.site/wp-json/jwt-auth/v1/token", {
+    fetch("https://web.abdulhaxor.my.id/wp-json/jwt-auth/v1/token", {
       method: "POST",
       body: new URLSearchParams({
         username: username,
@@ -36,17 +35,23 @@ export default function HomeLogin() {
         console.log(data);
         // berhasil (alert login)
         if (data.token) {
-          alert("Login Berhasil");
+          Swal.fire({
+            title: "Login Berhasil",
+            text: "Selamat Datang",
+            icon: "success",
+          });
           // set token ke local storage
           localStorage.setItem("token", data.token);
           navigate("/Admin");
         } else {
-          alert("Login Gagal");
+          Swal.fire({
+            title: "Login Gagal",
+            text: "username atau password salah",
+            icon: "error",
+          });
         }
       })
       .catch((error) => console.error("Error:", error));
-
-    setLoading(false);
   }
 
   useEffect(() => {}, []);
@@ -90,18 +95,7 @@ export default function HomeLogin() {
             className="btn btn-primary mt-3"
             onClick={handleSubmit}
           >
-            {loading ? (
-              <div>
-                <div>
-                  <div class="spinner-border" role="status">
-                    <span class="sr-only"></span>
-                  </div>
-                  loading
-                </div>
-              </div>
-            ) : (
-              "submit"
-            )}
+            Submit
           </button>
         </div>
       </div>

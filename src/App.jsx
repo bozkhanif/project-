@@ -13,6 +13,7 @@ import Pendaftaran from "./Pages/Pendaftaran";
 import Admin from "./Pages/Admin";
 import HomeLogin from "./Pages/HomeLogin";
 import "bootstrap/dist/js/bootstrap.js";
+import Posts from "./Pages/Posts";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Pendaftaran" element={<Pendaftaran />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/login" element={<HomeLogin />} />
+          <Route path="/Posts/:id" element={<Posts />} />
         </Routes>
       </BrowserRouter>
     </>
