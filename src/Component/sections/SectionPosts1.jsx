@@ -32,7 +32,7 @@ export default function SectionPosts1() {
           </div>
         </>
       ) : (
-        <>Data Tidak ditemukan </>
+        <>Data Tidak ditemukan.......!!!!! </>
       )}
     </>
   );

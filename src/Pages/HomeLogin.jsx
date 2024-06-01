@@ -62,7 +62,7 @@ export default function HomeLogin() {
           <h1 className="text-center">Al Anwar 4 - Login</h1>
           {/* username */}
           <div>
-            <label for="Username" className="form-label">
+            <label htmlFor="Username" className="form-label">
               Username
             </label>
             <input
@@ -77,7 +77,7 @@ export default function HomeLogin() {
           </div>
           {/* password */}
           <div>
-            <label for="password" className="form-label">
+            <label htmlFor="password" className="form-label">
               Password
             </label>
             <input

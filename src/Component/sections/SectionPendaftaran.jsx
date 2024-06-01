@@ -26,7 +26,7 @@ export default function SectionPendaftaran() {
                 <div className="container row justify-content-between">
                   {/* Nama Lengkap */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="nama lengkap" className="form-label">
+                    <label htmlFor="nama lengkap" className="form-label">
                       Nama Lengkap <span className="text-danger">*</span>
                     </label>
                     <input
@@ -39,7 +39,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Nama Panggilan */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="nama panggilan" className="form-label">
+                    <label htmlFor="nama panggilan" className="form-label">
                       Nama Panggilan <span className="text-danger">*</span>
                     </label>
                     <input
@@ -52,7 +52,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* NIK/Nomor KTP */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="NIK/nomor KTP" className="form-label">
+                    <label htmlFor="NIK/nomor KTP" className="form-label">
                       NIK/Nomor KTP <span className="text-danger">*</span>
                     </label>
                     <input
@@ -65,7 +65,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Nomor Telepon */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="nomor telepon" className="form-label">
+                    <label htmlFor="nomor telepon" className="form-label">
                       Nomor Telepon <span className="text-danger">*</span>
                     </label>
                     <input
@@ -78,7 +78,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Email */}
                   <div className="mb-3">
-                    <label for="Email" className="form-label">
+                    <label htmlFor="Email" className="form-label">
                       Email <span className="text-danger">*</span>
                     </label>
                     <input
@@ -91,7 +91,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Tempat Lahir */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="Tempat Lahir" className="form-label">
+                    <label htmlFor="Tempat Lahir" className="form-label">
                       Tempat Lahir <span className="text-danger">*</span>
                     </label>
                     <input
@@ -104,7 +104,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Tanggal Lahir */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="tanggal lahir" className="form-label">
+                    <label htmlFor="tanggal lahir" className="form-label">
                       Tanggal Lahir <span className="text-danger">*</span>
                     </label>
                     <input
@@ -117,7 +117,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Jenis Kelamin */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="" className="form-label">
+                    <label htmlFor="" className="form-label">
                       Jenis Kelamin <span className="text-danger">*</span>
                     </label>
                     <div className="input-group">
@@ -130,7 +130,7 @@ export default function SectionPendaftaran() {
                           className="form-check-input"
                           required
                         />
-                        <label for="Laki-laki">Laki-laki</label>
+                        <label htmlFor="Laki-laki">Laki-laki</label>
                       </div>
                       <div className="form-control gap-3 d-flex">
                         <input
@@ -141,13 +141,13 @@ export default function SectionPendaftaran() {
                           className="form-check-input"
                           required
                         />
-                        <label for="Perempuan">Perempuan</label>
+                        <label htmlFor="Perempuan">Perempuan</label>
                       </div>
                     </div>
                   </div>
                   {/* Pekerjaan */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="pekerjaan" className="form-label">
+                    <label htmlFor="pekerjaan" className="form-label">
                       Pekerjaan <span className="text-danger">*</span>
                     </label>
                     <input
@@ -160,7 +160,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Alamat Lengkap */}
                   <div className="mb-3">
-                    <label for="alamat lengkap" className="form-label">
+                    <label htmlFor="alamat lengkap" className="form-label">
                       Email <span className="text-danger">*</span>
                     </label>
                     <input
@@ -173,7 +173,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Provinsi */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="provinsi" className="form-label">
+                    <label htmlFor="provinsi" className="form-label">
                       Provinsi <span className="text-danger">*</span>
                     </label>
                     <input
@@ -186,7 +186,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Kabupaten */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="kabupaten" className="form-label">
+                    <label htmlFor="kabupaten" className="form-label">
                       Kabupaten <span className="text-danger">*</span>
                     </label>
                     <input
@@ -199,7 +199,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Kecamatan */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="kecamatan" className="form-label">
+                    <label htmlFor="kecamatan" className="form-label">
                       Kecamatan <span className="text-danger">*</span>
                     </label>
                     <input
@@ -212,7 +212,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Desa */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="desa" className="form-label">
+                    <label htmlFor="desa" className="form-label">
                       Desa <span className="text-danger">*</span>
                     </label>
                     <input
@@ -225,7 +225,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Pendidikan terakhir */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="pendidikan" className="form-label">
+                    <label htmlFor="pendidikan" className="form-label">
                       Pendidikan Terakhir <span className="text-danger">*</span>
                     </label>
                     <input
@@ -238,7 +238,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Status Pernikahan */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="status" className="form-label">
+                    <label htmlFor="status" className="form-label">
                       Status Pernikahan <span className="text-danger">*</span>
                     </label>
                     <input
@@ -251,7 +251,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Kepengurusan NU */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="kepengurusan" className="form-label">
+                    <label htmlFor="kepengurusan" className="form-label">
                       Kepengurusan di NU? <span className="text-danger">*</span>
                     </label>
                     <input
@@ -264,7 +264,7 @@ export default function SectionPendaftaran() {
                   </div>
                   {/* Jabatan Kepengurusan */}
                   <div className="col-md-6 col-12 mb-3">
-                    <label for="jabatan" className="form-label">
+                    <label htmlFor="jabatan" className="form-label">
                       Jabatan Kepengurusan{" "}
                       <span className="text-danger">*</span>
                     </label>

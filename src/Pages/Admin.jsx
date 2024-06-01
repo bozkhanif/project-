@@ -7,6 +7,40 @@ export default function Admin() {
   const navigate = useNavigate();
   const [judul, setJudul] = useState("");
   const [konten, setKonten] = useState("");
+  function CreatePost() {
+    fetch("https://web.abdulhaxor.my.id/wp-json/wp/v2/posts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+      body: JSON.stringify({
+        title: judul,
+        content: konten,
+        status: "publish",
+      }),
+    }).then(async (Response) => {
+      const data = await Response.json();
+      console.log(data, "post");
+      if (Response.ok) {
+        Swal.fire({
+          title: "Post Berhasil",
+          text: "Post Berhasil Dibuat",
+          icon: "success",
+        });
+      } else {
+        Swal.fire({
+          title: "Post Gagal",
+          text: "Post Gagal Dibuat",
+          icon: "error",
+        });
+      }
+    });
+  }
+  function handleSubmit(Event) {
+    Event.preventDefault();
+    CreatePost();
+  }
   function handlelogout() {
     Swal.fire({
       title: "Apakah anda yakin ingin logout?",
@@ -61,7 +95,7 @@ export default function Admin() {
         </div>
       </nav>
       {/* content */}
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="container row d-flex h-100 mt-5">
           <div className="col-5 m-auto border py-3 px-3 rounded-3">
             <h3>Membuat Postingan Blog</h3>
@@ -80,7 +114,7 @@ export default function Admin() {
             </div>
             {/* judul blog */}
             <div>
-              <label for="Username" className="form-label">
+              <label htmlFor="Username" className="form-label">
                 Judul
               </label>
               <input
