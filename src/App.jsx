@@ -30,6 +30,7 @@ function App() {
           <Route path="/Pendaftaran" element={<Pendaftaran />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/login" element={<HomeLogin />} />
+          <Route path="*" element={<h1>404 : Page Not Found</h1>} />
           <Route path="/Posts/:id" element={<Posts />} />
         </Routes>
       </BrowserRouter>

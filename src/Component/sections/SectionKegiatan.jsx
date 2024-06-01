@@ -2,6 +2,7 @@ import img1 from "../../assets/IMG_2008 1.png";
 import img2 from "../../assets/7fe59f4fd154299abafb8eb51e332cc2.jpeg";
 import img3 from "../../assets/7fe59f4fd154299abafb8eb51e332cc2.jpeg";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function SectionKegiatan() {
   const [posts, setPosts] = useState([]);
@@ -9,7 +10,7 @@ export default function SectionKegiatan() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://khanif.neuversity.site/wp-json/wp/v2/posts?_embed"
+          "https://web.abdulhaxor.my.id/wp-json/wp/v2/posts?_embed"
         );
         const data = await response.json();
         console.log(data, "post");
@@ -61,6 +62,9 @@ export default function SectionKegiatan() {
                 <div className="card-footer">
                   <small className="text-body-secondary">{post.date}</small>
                 </div>
+                <Link to={`/posts/${post.id}`} className="btn btn-primary">
+                  Read More
+                </Link>
               </div>
             </div>
           ))}
