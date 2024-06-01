@@ -7,7 +7,30 @@ export default function Admin() {
   const navigate = useNavigate();
   const [judul, setJudul] = useState("");
   const [konten, setKonten] = useState("");
-  function CreatePost() {
+  // state image
+  const [image, setImage] = useState(null);
+  async function uploadImage() {
+    const formData = new FormData();
+    formData.append("file", image);
+
+    const response = await fetch(
+      "https://web.abdulhaxor.my.id/wp-json/wp/v2/media",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: formData,
+      }
+    );
+
+    const data = await response.json();
+    if (!data.id) throw new Error("Gagal Upload");
+    return data.id;
+  }
+
+  async function CreatePost() {
+    const featuredmedia = await uploadImage();
     fetch("https://web.abdulhaxor.my.id/wp-json/wp/v2/posts", {
       method: "POST",
       headers: {
@@ -18,6 +41,7 @@ export default function Admin() {
         title: judul,
         content: konten,
         status: "publish",
+        featured_media: featuredmedia.id,
       }),
     }).then(async (Response) => {
       const data = await Response.json();
@@ -95,7 +119,7 @@ export default function Admin() {
         </div>
       </nav>
       {/* content */}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} encType="multipart/form-data">
         <div className="container row d-flex h-100 mt-5">
           <div className="col-5 m-auto border py-3 px-3 rounded-3">
             <h3>Membuat Postingan Blog</h3>
@@ -104,6 +128,7 @@ export default function Admin() {
               <label className="form-label">Featured media</label>
               <input
                 type="file"
+                onChange={(Event) => setImage(Event.target.files[0])}
                 className="form-control"
                 aria-label="file example"
                 required=""
