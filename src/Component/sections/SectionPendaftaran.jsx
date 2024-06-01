@@ -1,5 +1,25 @@
+import { useState } from "react";
 import imgDaftar from "../../assets/9.jpg";
 export default function SectionPendaftaran() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  function handleSubmit(Event) {
+    Event.preventDefault();
+    window.open(
+      "https://wa.me/6285875573466?text=" +
+        encodeURIComponent(
+          `
+Halo saya ingin mendaftar ke pondok pesantren Al-Anwar IV Sarang
+*berikut informasi pendaftaran*
+-Nama: ${name}
+-Email: ${email}
+
+> blockquote
+    `,
+          "_blank"
+        )
+    );
+  }
   return (
     <section>
       <section className=" mb-5 overflow-hidden position-relative">
@@ -22,7 +42,7 @@ export default function SectionPendaftaran() {
               <div className="py-5 px-5"></div>
             </div>
             <div className="container">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="container row justify-content-between">
                   {/* Nama Lengkap */}
                   <div className="col-md-6 col-12 mb-3">
@@ -35,10 +55,12 @@ export default function SectionPendaftaran() {
                       id="nama lengkap"
                       placeholder="Nama Sesuai KK"
                       required
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </div>
                   {/* Nama Panggilan */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="nama panggilan" className="form-label">
                       Nama Panggilan <span className="text-danger">*</span>
                     </label>
@@ -49,9 +71,9 @@ export default function SectionPendaftaran() {
                       placeholder="Masukkan Nama Panggilan"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* NIK/Nomor KTP */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="NIK/nomor KTP" className="form-label">
                       NIK/Nomor KTP <span className="text-danger">*</span>
                     </label>
@@ -62,9 +84,9 @@ export default function SectionPendaftaran() {
                       placeholder="Nomor Induk Kependudukan"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* Nomor Telepon */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="nomor telepon" className="form-label">
                       Nomor Telepon <span className="text-danger">*</span>
                     </label>
@@ -75,7 +97,7 @@ export default function SectionPendaftaran() {
                       placeholder="08XX-XXXX-XXXX"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* Email */}
                   <div className="mb-3">
                     <label htmlFor="Email" className="form-label">
@@ -87,10 +109,12 @@ export default function SectionPendaftaran() {
                       id="email"
                       placeholder="example@gmail.com"
                       required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   {/* Tempat Lahir */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="Tempat Lahir" className="form-label">
                       Tempat Lahir <span className="text-danger">*</span>
                     </label>
@@ -101,22 +125,9 @@ export default function SectionPendaftaran() {
                       placeholder="Kota/Kabupaten"
                       required
                     />
-                  </div>
-                  {/* Tanggal Lahir */}
-                  <div className="col-md-6 col-12 mb-3">
-                    <label htmlFor="tanggal lahir" className="form-label">
-                      Tanggal Lahir <span className="text-danger">*</span>
-                    </label>
-                    <input
-                      type="date"
-                      className="form-control"
-                      id="nomor telepon"
-                      placeholder="dd/mm/yyyy"
-                      required
-                    />
-                  </div>
-                  {/* Jenis Kelamin */}
-                  <div className="col-md-6 col-12 mb-3">
+                  </div> */}
+                  {/* Tanggal Lahir */}.{/* Jenis Kelamin */}
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="" className="form-label">
                       Jenis Kelamin <span className="text-danger">*</span>
                     </label>
@@ -144,9 +155,9 @@ export default function SectionPendaftaran() {
                         <label htmlFor="Perempuan">Perempuan</label>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   {/* Pekerjaan */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="pekerjaan" className="form-label">
                       Pekerjaan <span className="text-danger">*</span>
                     </label>
@@ -157,9 +168,9 @@ export default function SectionPendaftaran() {
                       placeholder="Programmer, Dokter, dll"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* Alamat Lengkap */}
-                  <div className="mb-3">
+                  {/* <div className="mb-3">
                     <label htmlFor="alamat lengkap" className="form-label">
                       Email <span className="text-danger">*</span>
                     </label>
@@ -170,9 +181,9 @@ export default function SectionPendaftaran() {
                       placeholder="Nama Jalan, Gang, No. Rumah, RT dan RW"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* Provinsi */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="provinsi" className="form-label">
                       Provinsi <span className="text-danger">*</span>
                     </label>
@@ -183,9 +194,9 @@ export default function SectionPendaftaran() {
                       placeholder="Provinsi"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* Kabupaten */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="kabupaten" className="form-label">
                       Kabupaten <span className="text-danger">*</span>
                     </label>
@@ -196,9 +207,9 @@ export default function SectionPendaftaran() {
                       placeholder="Kabupaten"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* Kecamatan */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="kecamatan" className="form-label">
                       Kecamatan <span className="text-danger">*</span>
                     </label>
@@ -209,9 +220,9 @@ export default function SectionPendaftaran() {
                       placeholder="Kecamatan"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* Desa */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="desa" className="form-label">
                       Desa <span className="text-danger">*</span>
                     </label>
@@ -222,9 +233,9 @@ export default function SectionPendaftaran() {
                       placeholder="Desa"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* Pendidikan terakhir */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="pendidikan" className="form-label">
                       Pendidikan Terakhir <span className="text-danger">*</span>
                     </label>
@@ -235,9 +246,9 @@ export default function SectionPendaftaran() {
                       placeholder="Pilih Pendidikan"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* Status Pernikahan */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="status" className="form-label">
                       Status Pernikahan <span className="text-danger">*</span>
                     </label>
@@ -248,9 +259,9 @@ export default function SectionPendaftaran() {
                       placeholder="Pilih Status"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* Kepengurusan NU */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="kepengurusan" className="form-label">
                       Kepengurusan di NU? <span className="text-danger">*</span>
                     </label>
@@ -261,9 +272,9 @@ export default function SectionPendaftaran() {
                       placeholder="Banom, Lembaga, dll"
                       required
                     />
-                  </div>
+                  </div> */}
                   {/* Jabatan Kepengurusan */}
-                  <div className="col-md-6 col-12 mb-3">
+                  {/* <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="jabatan" className="form-label">
                       Jabatan Kepengurusan{" "}
                       <span className="text-danger">*</span>
@@ -275,6 +286,9 @@ export default function SectionPendaftaran() {
                       placeholder="Ketua, Sekretaris, dll"
                       required
                     />
+                  </div> */}
+                  <div>
+                    <button className="btn btn-primary">Kirim</button>
                   </div>
                 </div>
               </form>
