@@ -90,7 +90,18 @@ export default function HomeLogin() {
             className="btn btn-primary mt-3"
             onClick={handleSubmit}
           >
-            Submit
+            {loading ? (
+              <div>
+                <div>
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only"></span>
+                  </div>
+                  loading
+                </div>
+              </div>
+            ) : (
+              "submit"
+            )}
           </button>
         </div>
       </div>
