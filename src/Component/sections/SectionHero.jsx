@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bgHero from "../../assets/9.jpg";
 import imgProfil from "../../assets/IMG_2008 1.png";
 export default function SectionHero() {
@@ -17,12 +18,12 @@ export default function SectionHero() {
                 Anwar Sarang dan MTS Sains Al Anwar 4.
               </p>
               <div>
-                <a href="/Pendaftaran" className="btn btn-success me-3">
+                <Link to="/Pendaftaran" className="btn btn-light me-3">
                   Pendaftaran
-                </a>
-                <button type="button" class="btn btn-outline-warning">
-                  Success
-                </button>
+                </Link>
+                <Link to="/Profile" className="btn btn-outline-warning">
+                  Profil
+                </Link>
               </div>
             </div>
             {/* img */}

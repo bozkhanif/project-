@@ -10,7 +10,7 @@ export default function SectionKegiatan() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://web.abdulhaxor.my.id/wp-json/wp/v2/posts?_embed"
+          "https://khanif.neuversity.site/wp-json/wp/v2/posts?_embed"
         );
         const data = await response.json();
         console.log(data, "post");
@@ -39,7 +39,7 @@ export default function SectionKegiatan() {
         <div className="row py-4">
           {posts.map((post) => (
             <div className="col-4">
-              <div className="card">
+              <div className="card mb-4">
                 <img
                   src={
                     post._embedded["wp:featuredmedia"]
@@ -54,7 +54,7 @@ export default function SectionKegiatan() {
                   <div
                     className="card-text"
                     dangerouslySetInnerHTML={{
-                      __html: getMaxKarakter(post.content.rendered, 100),
+                      __html: getMaxKarakter(post.excerpt.rendered, 100),
                     }}
                   ></div>
                 </div>

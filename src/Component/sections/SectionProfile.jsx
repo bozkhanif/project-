@@ -12,12 +12,12 @@ export default function SectionProfile() {
         {/* background */}
         <div className="position-absolute top-0 left-0 z-n1 bg-overlay-hero"></div>
         <img
-          className="position-absolute top-0 left-0 z-n2 w-100 h-100"
+          className="position-absolute top-0 left-0 z-n2 w-100 h-100 object-fit-cover"
           src={imgSub}
         />
       </section>
       <div className="container">
-        <img src={imgProfile} className="w-100" />
+        <img src={imgProfile} className="w-100 img-profile" />
         <div className="row py-5">
           <div className="col-8">
             <h1>

@@ -32,6 +32,7 @@ function App() {
           <Route path="/admin/login" element={<HomeLogin />} />
           <Route path="*" element={<h1>404 : Page Not Found</h1>} />
           <Route path="/Posts/:id" element={<Posts />} />
+          <Route path="*" element={<h1>404 : Page Not Found</h1>} />
         </Routes>
       </BrowserRouter>
     </>

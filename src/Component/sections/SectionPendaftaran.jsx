@@ -30,7 +30,7 @@ Halo saya ingin mendaftar ke pondok pesantren Al-Anwar IV Sarang
         {/* background */}
         <div className="position-absolute top-0 left-0 z-n1 bg-overlay-hero"></div>
         <img
-          className="position-absolute top-0 left-0 z-n2 w-100 h-100"
+          className="position-absolute top-0 left-0 z-n2 w-100 h-100 object-fit-cover"
           src={imgDaftar}
         />
       </section>

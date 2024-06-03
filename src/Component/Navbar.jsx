@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ImgLogo from "../assets/Group 2.png";
 
 export default function Navbar() {
@@ -6,7 +6,10 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg bg-primary navbar-dark">
         <div className="container">
-          <img src={ImgLogo} className="logo" />
+          <Link to={"/"}>
+            <img src={ImgLogo} className="logo" />
+          </Link>
+
           <button
             className="navbar-toggler border-white"
             type="button"
@@ -41,7 +44,7 @@ export default function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link text-white" to="/Galery">
-                  galery
+                  Galery
                 </NavLink>
               </li>
               <li className="nav-item">
