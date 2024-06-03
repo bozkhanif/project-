@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import imgSupport from "../../assets/7fe59f4fd154299abafb8eb51e332cc2.jpeg";
 export default function SectionSupport() {
   return (
@@ -21,9 +22,9 @@ export default function SectionSupport() {
               maecenas vitae pulvinar. Tellus ultrices in ipsum ultricies libero
               tortor sapien sit ...
             </p>
-            <button class="btn btn-primary" type="submit">
+            <Link to="/ComingSoon" className="btn btn-primary">
               Baca Selengkapnya
-            </button>
+            </Link>
           </div>
         </div>
       </div>

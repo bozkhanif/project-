@@ -15,28 +15,26 @@ export default function Footer() {
               </h4>
             </div>
           </div>
-          <div className="col-4 position-relative d-flex justify-content-center align-items-center">
-            <img
-              className="position-absolute"
-              width={178}
-              height={178}
-              src={Ellipse3}
-              alt="Ellipse3"
-            />
-            <img
-              className="position-absolute"
-              width={137}
-              height={137}
-              src={Ellipse2}
-              alt="Ellipse2"
-            />
-            <img
-              className="position-absolute"
-              width={50}
-              height={50}
-              src={play}
-              alt="play"
-            />
+          <div className="col-md-4 ">
+            <a href="https://www.youtube.com/@alanwar4media806" target="_blank">
+              <div className="position-relative d-flex justify-content-center align-items-center">
+                <img width={178} height={178} src={Ellipse3} alt="Ellipse3" />
+                <img
+                  className="position-absolute"
+                  width={137}
+                  height={137}
+                  src={Ellipse2}
+                  alt="Ellipse2"
+                />
+                <img
+                  className="position-absolute"
+                  width={50}
+                  height={50}
+                  src={play}
+                  alt="play"
+                />
+              </div>
+            </a>
           </div>
         </div>
       </div>

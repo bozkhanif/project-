@@ -35,15 +35,15 @@ Halo saya ingin mendaftar ke pondok pesantren Al-Anwar IV Sarang
         />
       </section>
 
-      <section className="container section-pendaftaran">
+      <section className=" section-pendaftaran">
         <div className="row justify-content-center">
           <div className="col-8">
             <div className="bg-secondary-subtle rounded-2 mb-3 mt-3">
               <div className="py-5 px-5"></div>
             </div>
-            <div className="container">
+            <div className="">
               <form onSubmit={handleSubmit}>
-                <div className="container row justify-content-between">
+                <div className=" row justify-content-between">
                   {/* Nama Lengkap */}
                   <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="nama lengkap" className="form-label">
@@ -99,7 +99,7 @@ Halo saya ingin mendaftar ke pondok pesantren Al-Anwar IV Sarang
                     />
                   </div> */}
                   {/* Email */}
-                  <div className="mb-3">
+                  <div className="col-md-6 col-12 mb-3">
                     <label htmlFor="Email" className="form-label">
                       Email <span className="text-danger">*</span>
                     </label>

@@ -38,7 +38,7 @@ export default function SectionKegiatan() {
         <h3>Kegiatan Pondok</h3>
         <div className="row py-4">
           {posts.map((post) => (
-            <div className="col-4">
+            <div className="col-12 col-md-4">
               <div className="card mb-4">
                 <img
                   src={

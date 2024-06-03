@@ -18,10 +18,11 @@ export default function SectionPosts1() {
     <>
       {Posts ? (
         <>
-          <div style={{ height: "40vh", width: "100vw" }}>
+          <div className="container">
             <img
               src={Posts._embedded["wp:featuredmedia"][0].source_url}
-              className="w-100 h-100 object-fit-cover"
+              className="w-100 img-profile-posts"
+              // <img src={imgProfile} className="w-100 img-profile" />
             />
           </div>
           <div className="container mt-5">

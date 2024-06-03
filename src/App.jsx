@@ -14,6 +14,7 @@ import Admin from "./Pages/Admin";
 import HomeLogin from "./Pages/HomeLogin";
 import "bootstrap/dist/js/bootstrap.js";
 import Posts from "./Pages/Posts";
+import ComingSoon from "./Pages/ComingSoon";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,9 +31,9 @@ function App() {
           <Route path="/Pendaftaran" element={<Pendaftaran />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/login" element={<HomeLogin />} />
-          <Route path="*" element={<h1>404 : Page Not Found</h1>} />
           <Route path="/Posts/:id" element={<Posts />} />
-          <Route path="*" element={<h1>404 : Page Not Found</h1>} />
+          <Route path="/ComingSoon" element={<ComingSoon />} />
+          <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </BrowserRouter>
     </>

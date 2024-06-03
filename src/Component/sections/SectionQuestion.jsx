@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bgHero from "../../assets/9.jpg";
 import imgProfil from "../../assets/IMG_2008 1.png";
 
@@ -9,9 +10,9 @@ export default function SectionQuestion() {
         <h3>
           “Ojo mikir engko dadi opo. Sing penting saiki sinau sing sergep.”
         </h3>
-        <a href="/Pendaftaran" className="btn btn-warning mt-2">
+        <Link to="/Pendaftaran" className="btn btn-warning mt-2">
           Ayo Mondok Sekarang
-        </a>
+        </Link>
       </div>
 
       {/* background */}

@@ -38,17 +38,17 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link text-white" to="/Program">
+                <NavLink className="nav-link text-white" to="/ComingSoon">
                   Program
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link text-white" to="/Galery">
+                <NavLink className="nav-link text-white" to="/ComingSoon">
                   Galery
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link text-white" to="/Contact">
+                <NavLink className="nav-link text-white" to="ComingSoon">
                   Contact
                 </NavLink>
               </li>

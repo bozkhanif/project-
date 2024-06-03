@@ -19,7 +19,7 @@ export default function SectionProfile() {
       <div className="container">
         <img src={imgProfile} className="w-100 img-profile" />
         <div className="row py-5">
-          <div className="col-8">
+          <div className="col-md-8">
             <h1>
               Profil Pondok Pesantren Al-Anwar IV Sarang, Rembang, Jawa Tengah.
             </h1>
@@ -47,7 +47,7 @@ export default function SectionProfile() {
               object opacity.
             </p>
           </div>
-          <div className="col-4 py-3">
+          <div className="col-md-4 py-3">
             <div className="container bg-light py-3">
               <p className="fw-bold text-primary">Visi</p>
               <p>
