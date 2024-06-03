@@ -21,6 +21,9 @@ export default function SectionSupport() {
               maecenas vitae pulvinar. Tellus ultrices in ipsum ultricies libero
               tortor sapien sit ...
             </p>
+            <button class="btn btn-primary" type="submit">
+              Baca Selengkapnya
+            </button>
           </div>
         </div>
       </div>
