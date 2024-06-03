@@ -67,7 +67,13 @@ export default function SectionProfile() {
               </p>
             </div>
             <div className="py-3">
-              <button className="btn btn-primary w-100">Download Brosur</button>
+              <a
+                href="/brosur.pdf"
+                target="_blank"
+                className="btn btn-primary w-100"
+              >
+                Download Brosur
+              </a>
             </div>
           </div>
         </div>
