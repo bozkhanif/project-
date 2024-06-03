@@ -39,7 +39,7 @@ export default function SectionKegiatan() {
         <div className="row py-4">
           {posts.map((post) => (
             <div className="col-12 col-md-4">
-              <div className="card mb-4">
+              <div className="card mb-4 h-100">
                 <img
                   src={
                     post._embedded["wp:featuredmedia"]
@@ -56,7 +56,7 @@ export default function SectionKegiatan() {
                   <div
                     className="card-text card-blog-description"
                     dangerouslySetInnerHTML={{
-                      __html: getMaxKarakter(post.excerpt.rendered, 100),
+                      __html: getMaxKarakter(post.excerpt.rendered, 200),
                     }}
                   ></div>
                 </div>
