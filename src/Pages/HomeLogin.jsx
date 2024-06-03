@@ -12,7 +12,7 @@ export default function HomeLogin() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(`username: ${username}, password: ${password}`);
-    fetch("https://web.abdulhaxor.my.id/wp-json/jwt-auth/v1/token", {
+    fetch("https://khanif.neuversity.site/wp-json/jwt-auth/v1/token", {
       method: "POST",
       body: new URLSearchParams({
         username: username,

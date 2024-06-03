@@ -14,7 +14,7 @@ export default function Admin() {
     formData.append("file", image);
 
     const response = await fetch(
-      "https://web.abdulhaxor.my.id/wp-json/wp/v2/media",
+      "https://khanif.neuversity.site/wp-json/wp/v2/media",
       {
         method: "POST",
         headers: {
@@ -31,7 +31,7 @@ export default function Admin() {
 
   async function CreatePost() {
     const featuredmedia = await uploadImage();
-    fetch("https://web.abdulhaxor.my.id/wp-json/wp/v2/posts", {
+    fetch("https://khanif.neuversity.site/wp-json/wp/v2/posts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

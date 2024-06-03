@@ -50,11 +50,13 @@ export default function SectionKegiatan() {
                   alt="..."
                 />
                 <div className="card-body">
-                  <h5 className="card-title">{post.title.rendered}</h5>
+                  <h5 className="card-title card-blog-title">
+                    {post.title.rendered}
+                  </h5>
                   <div
-                    className="card-text"
+                    className="card-text card-blog-description"
                     dangerouslySetInnerHTML={{
-                      __html: getMaxKarakter(post.excerpt.rendered, 100),
+                      __html: getMaxKarakter(post.excerpt.rendered, 50),
                     }}
                   ></div>
                 </div>

@@ -6,7 +6,7 @@ export default function SectionPosts1() {
   const params = useParams();
   useEffect(() => {
     fetch(
-      `https://web.abdulhaxor.my.id/wp-json/wp/v2/posts/${params.id}?_embed`
+      `https://khanif.neuversity.site/wp-json/wp/v2/posts/${params.id}?_embed`
     )
       .then((Response) => Response.json())
       .then((data) => {
