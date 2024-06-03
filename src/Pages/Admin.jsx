@@ -7,6 +7,7 @@ export default function Admin() {
   const navigate = useNavigate();
   const [judul, setJudul] = useState("");
   const [konten, setKonten] = useState("");
+  const [loading, setLoading] = useState(false);
   // state image
   const [image, setImage] = useState(null);
   async function uploadImage() {
@@ -25,11 +26,13 @@ export default function Admin() {
     );
 
     const data = await response.json();
+    console.log(data);
     if (!data.id) throw new Error("Gagal Upload");
-    return data.id;
+    return data;
   }
 
   async function CreatePost() {
+    setLoading(true);
     const featuredmedia = await uploadImage();
     fetch("https://khanif.neuversity.site/wp-json/wp/v2/posts", {
       method: "POST",
@@ -43,23 +46,27 @@ export default function Admin() {
         status: "publish",
         featured_media: featuredmedia.id,
       }),
-    }).then(async (Response) => {
-      const data = await Response.json();
-      console.log(data, "post");
-      if (Response.ok) {
-        Swal.fire({
-          title: "Post Berhasil",
-          text: "Post Berhasil Dibuat",
-          icon: "success",
-        });
-      } else {
-        Swal.fire({
-          title: "Post Gagal",
-          text: "Post Gagal Dibuat",
-          icon: "error",
-        });
-      }
-    });
+    })
+      .then(async (Response) => {
+        const data = await Response.json();
+        console.log(data, "post");
+        if (Response.ok) {
+          Swal.fire({
+            title: "Post Berhasil",
+            text: "Post Berhasil Dibuat",
+            icon: "success",
+          });
+        } else {
+          Swal.fire({
+            title: "Post Gagal",
+            text: "Post Gagal Dibuat",
+            icon: "error",
+          });
+        }
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }
   function handleSubmit(Event) {
     Event.preventDefault();
@@ -169,7 +176,20 @@ export default function Admin() {
               </div>
             </div>
             {/* button submit */}
-            <button className="btn btn-primary mt-3">Submit</button>
+            <button className="btn btn-primary mt-3">
+              {loading ? (
+                <div>
+                  <div>
+                    <div class="spinner-border" role="status">
+                      <span class="sr-only"></span>
+                    </div>
+                    loading
+                  </div>
+                </div>
+              ) : (
+                "Submit"
+              )}
+            </button>
           </div>
         </div>
       </form>

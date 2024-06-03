@@ -18,9 +18,9 @@ export default function SectionPosts1() {
     <>
       {Posts ? (
         <>
-          <div style={{ height: "20vh", width: "100vw" }}>
+          <div style={{ height: "40vh", width: "100vw" }}>
             <img
-              src="https://picsum.photos/1080/1080"
+              src={Posts._embedded["wp:featuredmedia"][0].source_url}
               className="w-100 h-100 object-fit-cover"
             />
           </div>
