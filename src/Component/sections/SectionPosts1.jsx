@@ -20,9 +20,12 @@ export default function SectionPosts1() {
         <>
           <div className="container">
             <img
-              src={Posts._embedded["wp:featuredmedia"][0].source_url}
+              src={
+                Posts._embedded["wp:featuredmedia"]
+                  ? Posts._embedded["wp:featuredmedia"][0].source_url
+                  : "https://picsum.photos/300/300"
+              }
               className="w-100 img-profile-posts"
-              // <img src={imgProfile} className="w-100 img-profile" />
             />
           </div>
           <div className="container mt-5">
