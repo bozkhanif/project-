@@ -61,7 +61,7 @@ export default function HomeLogin() {
   return (
     <section className="container px-5">
       <div className="row d-flex h-100 mt-5 ">
-        <div className="col-12 col-md-5 m-auto border py-3 px-3 rounded-3 ">
+        <div className="col-12 col-md-5 m-auto border py-3 px-3 rounded-3 bg-light">
           <h1 className="text-center">Al Anwar 4 - Login</h1>
           {/* username */}
           <div>
@@ -71,7 +71,7 @@ export default function HomeLogin() {
             <input
               type="text"
               className="form-control"
-              id="nama lengkap"
+              id="Username"
               value={username}
               onChange={(Event) => setUsername(Event.target.value)}
               required
@@ -97,6 +97,7 @@ export default function HomeLogin() {
             type="button"
             className="btn btn-primary mt-3"
             onClick={handleSubmit}
+            id="submit"
           >
             {loading ? (
               <div>

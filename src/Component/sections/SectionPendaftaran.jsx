@@ -288,7 +288,7 @@ Halo saya ingin mendaftar ke pondok pesantren Al-Anwar IV Sarang
                     />
                   </div> */}
                   <div>
-                    <button className="btn btn-primary">Kirim</button>
+                    <button className="btn btn-primary mb-3">Kirim</button>
                   </div>
                 </div>
               </form>
