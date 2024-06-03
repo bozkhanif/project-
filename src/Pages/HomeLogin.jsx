@@ -8,9 +8,11 @@ export default function HomeLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
     console.log(`username: ${username}, password: ${password}`);
     fetch("https://khanif.neuversity.site/wp-json/jwt-auth/v1/token", {
       method: "POST",
@@ -51,7 +53,8 @@ export default function HomeLogin() {
           });
         }
       })
-      .catch((error) => console.error("Error:", error));
+      .catch((error) => console.error("Error:", error))
+      .finally(() => setLoading(false));
   }
 
   useEffect(() => {}, []);
@@ -95,7 +98,18 @@ export default function HomeLogin() {
             className="btn btn-primary mt-3"
             onClick={handleSubmit}
           >
-            Submit
+            {loading ? (
+              <div>
+                <div>
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only"></span>
+                  </div>
+                  loading
+                </div>
+              </div>
+            ) : (
+              "Submit"
+            )}
           </button>
         </div>
       </div>

@@ -118,11 +118,9 @@ export default function Admin() {
         <div className="container">
           <h1 className="text-white">Admin</h1>
 
-          <div className="collapse navbar-collapse">
-            <button className="btn btn-danger ms-auto" onClick={handlelogout}>
-              Logout
-            </button>
-          </div>
+          <button className="btn btn-danger ms-auto" onClick={handlelogout}>
+            Logout
+          </button>
         </div>
       </nav>
       {/* content */}
