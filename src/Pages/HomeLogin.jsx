@@ -56,9 +56,9 @@ export default function HomeLogin() {
 
   useEffect(() => {}, []);
   return (
-    <section>
+    <section className="container px-5">
       <div className="row d-flex h-100 mt-5 ">
-        <div className="col-5 m-auto border py-3 px-3 rounded-3 ">
+        <div className="col-12 col-md-5 m-auto border py-3 px-3 rounded-3 ">
           <h1 className="text-center">Al Anwar 4 - Login</h1>
           {/* username */}
           <div>

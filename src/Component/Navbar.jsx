@@ -48,7 +48,7 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link text-white" to="ComingSoon">
+                <NavLink className="nav-link text-white" to="/ComingSoon">
                   Contact
                 </NavLink>
               </li>

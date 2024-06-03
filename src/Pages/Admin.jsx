@@ -126,9 +126,13 @@ export default function Admin() {
         </div>
       </nav>
       {/* content */}
-      <form onSubmit={handleSubmit} encType="multipart/form-data">
-        <div className="container row d-flex h-100 mt-5">
-          <div className="col-5 m-auto border py-3 px-3 rounded-3">
+      <form
+        onSubmit={handleSubmit}
+        encType="multipart/form-data"
+        className="bg-warning"
+      >
+        <div className="container row d-flex h-100 mt-5 bg-danger">
+          <div className="col-12 col-md-6 m-auto border py-3 px-3 rounded-3 bg-light">
             <h3>Membuat Postingan Blog</h3>
             {/* chose file */}
             <div className="mb-3 mt-3">
