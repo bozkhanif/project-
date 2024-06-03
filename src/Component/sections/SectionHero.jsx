@@ -8,7 +8,7 @@ export default function SectionHero() {
         <div className="container h-100 text-white">
           <div className="row h-100 ">
             {/* text */}
-            <div className="col-md-6 col-12 align-self-center">
+            <div className="col-md-6 col-12 mt-2 align-self-center">
               <p className="text-warning">Selamat datang di</p>
               <h1>Pondok Pesantren Al-Anwar IV Sarang</h1>
               <p>
