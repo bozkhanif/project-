@@ -56,7 +56,7 @@ export default function SectionKegiatan() {
                   <div
                     className="card-text card-blog-description"
                     dangerouslySetInnerHTML={{
-                      __html: getMaxKarakter(post.excerpt.rendered, 50),
+                      __html: getMaxKarakter(post.excerpt.rendered, 100),
                     }}
                   ></div>
                 </div>
