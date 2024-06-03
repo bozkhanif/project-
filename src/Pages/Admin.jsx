@@ -110,7 +110,7 @@ export default function Admin() {
   }, []);
   return (
     <section
-      className="d-flex flex-column w-100"
+      className="d-flex flex-column w-100 align-items-stretch"
       style={{ minHeight: "100vh" }}
     >
       {/* navbar */}
@@ -126,77 +126,75 @@ export default function Admin() {
         </div>
       </nav>
       {/* content */}
-      <form
-        onSubmit={handleSubmit}
-        encType="multipart/form-data"
-        className="bg-warning"
-      >
-        <div className="container row d-flex h-100 mt-5 bg-danger">
-          <div className="col-12 col-md-6 m-auto border py-3 px-3 rounded-3 bg-light">
-            <h3>Membuat Postingan Blog</h3>
-            {/* chose file */}
-            <div className="mb-3 mt-3">
-              <label className="form-label">Featured media</label>
-              <input
-                type="file"
-                onChange={(Event) => setImage(Event.target.files[0])}
-                className="form-control"
-                aria-label="file example"
-                required=""
-              />
-              <div className="invalid-feedback">
-                Example invalid form file feedback
-              </div>
-            </div>
-            {/* judul blog */}
-            <div>
-              <label htmlFor="Username" className="form-label">
-                Judul
-              </label>
-              <input
-                type="text"
-                onInput={(Event) => setJudul(Event.target.value)} //{setJudul}
-                className="form-control"
-                id="nama lengkap"
-                placeholder="Judul Blog.."
-                required
-              />
-            </div>
-            {/* Conten */}
-            <div className="mt-3">
-              <label htmlFor="validationTextarea" className="form-label">
-                Conten
-              </label>
-              <textarea
-                className="form-control"
-                id="validationTextarea"
-                placeholder="Conten Blog.."
-                required=""
-                defaultValue={""}
-                onInput={(Event) => setKonten(Event.target.value)} //{setKonten}
-              />
-              <div className="invalid-feedback">
-                Please enter a message in the Conten form
-              </div>
-            </div>
-            {/* button submit */}
-            <button className="btn btn-primary mt-3">
-              {loading ? (
-                <div>
-                  <div>
-                    <div class="spinner-border" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    loading
-                  </div>
+      <div className="container">
+        <form onSubmit={handleSubmit} encType="multipart/form-data">
+          <div className=" row d-flex h-100 mt-5 ">
+            <div className="col-12 col-md-6 m-auto border py-3 px-3 rounded-3 bg-light px-5">
+              <h3>Membuat Postingan Blog</h3>
+              {/* chose file */}
+              <div className="mb-3 mt-3">
+                <label className="form-label">Featured media</label>
+                <input
+                  type="file"
+                  onChange={(Event) => setImage(Event.target.files[0])}
+                  className="form-control"
+                  aria-label="file example"
+                  required=""
+                />
+                <div className="invalid-feedback">
+                  Example invalid form file feedback
                 </div>
-              ) : (
-                "Submit"
-              )}
-            </button>
+              </div>
+              {/* judul blog */}
+              <div>
+                <label htmlFor="Username" className="form-label">
+                  Judul
+                </label>
+                <input
+                  type="text"
+                  onInput={(Event) => setJudul(Event.target.value)} //{setJudul}
+                  className="form-control"
+                  id="nama lengkap"
+                  placeholder="Judul Blog.."
+                  required
+                />
+              </div>
+              {/* Conten */}
+              <div className="mt-3">
+                <label htmlFor="validationTextarea" className="form-label">
+                  Conten
+                </label>
+                <textarea
+                  className="form-control"
+                  id="validationTextarea"
+                  placeholder="Conten Blog.."
+                  required=""
+                  defaultValue={""}
+                  onInput={(Event) => setKonten(Event.target.value)} //{setKonten}
+                />
+                <div className="invalid-feedback">
+                  Please enter a message in the Conten form
+                </div>
+              </div>
+              {/* button submit */}
+              <button className="btn btn-primary mt-3">
+                {loading ? (
+                  <div>
+                    <div>
+                      <div class="spinner-border" role="status">
+                        <span class="sr-only"></span>
+                      </div>
+                      loading
+                    </div>
+                  </div>
+                ) : (
+                  "Submit"
+                )}
+              </button>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
       {/* footer */}
       <div className=" bg-primary mt-auto">
         <div className="container">
