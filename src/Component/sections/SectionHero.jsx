@@ -16,9 +16,14 @@ export default function SectionHero() {
                 Hj. Nawal Nur Arafah yang di dalamnya termuat Lembaga SMK Al
                 Anwar Sarang dan MTS Sains Al Anwar 4.
               </p>
-              <a href="/Pendaftaran" className="btn btn-success">
-                Pendaftaran
-              </a>
+              <div>
+                <a href="/Pendaftaran" className="btn btn-success me-3">
+                  Pendaftaran
+                </a>
+                <button type="button" class="btn btn-outline-warning">
+                  Success
+                </button>
+              </div>
             </div>
             {/* img */}
             <div className="col-6 align-self-end">
