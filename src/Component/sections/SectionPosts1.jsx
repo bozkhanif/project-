@@ -36,7 +36,7 @@ export default function SectionPosts1() {
           </div>
         </>
       ) : (
-        <>Data Tidak ditemukan.......!!!!! </>
+        <div className="text-center">Data Tidak ditemukan.......!!!!! </div>
       )}
     </>
   );
