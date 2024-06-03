@@ -33,9 +33,48 @@ export default function SectionDummy() {
             {/* card 1 */}
             <div className="col-md-4 col-12 mt-4 mt-md-0">
               <div className="d-flex flex-column h-100">
-                <CardProgram />
-                <CardProgram />
-                <CardProgram />
+                <CardProgram
+                  judul={
+                    <>
+                      <h4>Tahfidz Al-Qur'an</h4>
+                    </>
+                  }
+                  Konten={
+                    <>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Optio aperiam vero debitis illo aliquid, tempora explicabo
+                      placeat quia veniam nam?
+                    </>
+                  }
+                />
+                <CardProgram
+                  judul={
+                    <>
+                      <h4>Metode Al Qur'an Yanbu'a</h4>
+                    </>
+                  }
+                  Konten={
+                    <>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Optio aperiam vero debitis illo aliquid, tempora explicabo
+                      placeat quia veniam nam?
+                    </>
+                  }
+                />
+                <CardProgram
+                  judul={
+                    <>
+                      <h3>Metode Nahwu Al Asas</h3>
+                    </>
+                  }
+                  Konten={
+                    <>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Optio aperiam vero debitis illo aliquid, tempora explicabo
+                      placeat quia veniam nam?
+                    </>
+                  }
+                />
               </div>
             </div>
             {/* card 1 end */}
@@ -43,9 +82,48 @@ export default function SectionDummy() {
             {/* card 2 */}
             <div className="col-md-4 col-12 mt-4 mt-md-0">
               <div className="d-flex flex-column h-100">
-                <CardProgram />
-                <CardProgram />
-                <CardProgram />
+                <CardProgram
+                  judul={
+                    <>
+                      <h3>Kitab Bandongan</h3>
+                    </>
+                  }
+                  Konten={
+                    <>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Optio aperiam vero debitis illo aliquid, tempora explicabo
+                      placeat quia veniam nam?
+                    </>
+                  }
+                />
+                <CardProgram
+                  judul={
+                    <>
+                      <h3>Sorogan Kitab</h3>
+                    </>
+                  }
+                  Konten={
+                    <>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Optio aperiam vero debitis illo aliquid, tempora explicabo
+                      placeat quia veniam nam?
+                    </>
+                  }
+                />
+                <CardProgram
+                  judul={
+                    <>
+                      <h3>Batsul Masail</h3>
+                    </>
+                  }
+                  Konten={
+                    <>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Optio aperiam vero debitis illo aliquid, tempora explicabo
+                      placeat quia veniam nam?
+                    </>
+                  }
+                />
               </div>
             </div>
             {/* card 2 end */}

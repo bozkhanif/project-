@@ -1,13 +1,10 @@
-export default function CardProgram() {
+export default function CardProgram({ judul, Konten }) {
   return (
     <>
       <div className="card mb-3 h-100">
-        <div className="card-body">
-          <h5 className="card-title">Tahfidz Al Qur'an</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
+        <div className="card-body d-flex flex-column align-items-center text-center justify-content-center">
+          <h5>{judul}</h5>
+          <p>{Konten}</p>
         </div>
       </div>
     </>
